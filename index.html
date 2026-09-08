@@ -48,7 +48,6 @@
   </script>
   
   <style>
-    /* Custom scrollbars and transitions */
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #0b1120; }
     ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
@@ -470,7 +469,6 @@
             </div>
 
             <div id="citation-inspector-list" class="space-y-3">
-              <!-- Dynamically populated or default inspector cards -->
               <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs space-y-1">
                 <div class="flex items-center justify-between">
                   <span class="text-[10px] font-mono text-emerald-400 font-semibold">[Ref 1] MoPR / World Bank</span>
@@ -518,7 +516,6 @@
           <p class="text-xs text-slate-400">Interactive spatial layer correlating parcel boundaries, land use, encroachment & litigation hotspots</p>
         </div>
 
-        <!-- Territory Drill-down Selector -->
         <div class="flex items-center gap-2">
           <select id="gis-region-select" onchange="changeMapRegion(this.value)" class="bg-slate-900 border border-slate-700 text-white text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-sky-500">
             <option value="telangana">Telangana (Rangareddy & Medchal Cadastre)</option>
@@ -529,11 +526,9 @@
         </div>
       </div>
 
-      <!-- Map + Control Sidebars -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         <!-- Interactive Leaflet Map Container -->
         <div class="lg:col-span-8 glass-panel rounded-2xl border border-slate-800 p-2 overflow-hidden relative">
-          <!-- Floating Map Mode Toolbar -->
           <div class="absolute top-4 right-4 z-[1000] flex bg-slate-900/90 border border-slate-700 backdrop-blur rounded-xl p-1 gap-1 text-xs">
             <button onclick="toggleMapLayer('cadastre')" id="layer-btn-cadastre" class="px-2.5 py-1 rounded-lg bg-sky-600 text-white font-medium text-[11px] transition-all">Cadastral Parcels</button>
             <button onclick="toggleMapLayer('disputes')" id="layer-btn-disputes" class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 font-medium text-[11px] hover:text-white transition-all">Dispute Heatmap</button>
@@ -541,10 +536,8 @@
             <button onclick="toggleMapLayer('forest')" id="layer-btn-forest" class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 font-medium text-[11px] hover:text-white transition-all">Forest Boundary</button>
           </div>
 
-          <!-- Map Element -->
           <div id="gis-map" class="w-full h-[540px] rounded-xl z-10 bg-slate-950"></div>
 
-          <!-- Bottom Legend -->
           <div class="p-3 bg-slate-900/90 border-t border-slate-800 mt-2 rounded-xl flex flex-wrap items-center justify-between gap-3 text-[11px]">
             <div class="flex items-center gap-4">
               <span class="flex items-center gap-1.5 text-slate-300">
@@ -619,7 +612,6 @@
             </div>
           </div>
 
-          <!-- District Sprawl Warning Box -->
           <div class="glass-panel p-4 rounded-2xl border border-slate-800 text-xs space-y-2">
             <div class="flex items-center justify-between text-amber-400 font-semibold">
               <span class="flex items-center gap-1.5">
@@ -667,7 +659,6 @@
             Configurable Policy Levers
           </h3>
 
-          <!-- Slider 1: Conclusive Titling (Torrens) Coverage -->
           <div class="space-y-2">
             <div class="flex items-center justify-between text-xs">
               <span class="font-medium text-slate-300">Conclusive Titling Coverage (% of Districts)</span>
@@ -677,7 +668,6 @@
             <p class="text-[11px] text-slate-500">Adoption of Torrens-style state-guaranteed conclusive title deeds replacing deed-registration.</p>
           </div>
 
-          <!-- Slider 2: Dedicated Land Dispute Tribunals Capacity -->
           <div class="space-y-2">
             <div class="flex items-center justify-between text-xs">
               <span class="font-medium text-slate-300">Dispute Fast-Track Capacity (Units)</span>
@@ -687,7 +677,6 @@
             <p class="text-[11px] text-slate-500">Specialized quasi-judicial benches to clear revenue court backlog without civil court delays.</p>
           </div>
 
-          <!-- Slider 3: Agricultural Tenancy Legalization & Protection -->
           <div class="space-y-2">
             <div class="flex items-center justify-between text-xs">
               <span class="font-medium text-slate-300">Tenancy Formalization Index</span>
@@ -697,7 +686,6 @@
             <p class="text-[11px] text-slate-500">Legal recognition of tenant cultivators to access institutional crop loans without fear of land loss.</p>
           </div>
 
-          <!-- Slider 4: Eco-Sensitive & Forest Boundary Buffer Enforcement -->
           <div class="space-y-2">
             <div class="flex items-center justify-between text-xs">
               <span class="font-medium text-slate-300">Eco-Buffer Satellite Guardrail (km)</span>
@@ -707,7 +695,6 @@
             <p class="text-[11px] text-slate-500">Strict automated GIS alerts for industrial conversion within eco-fragile sanctuary buffers.</p>
           </div>
 
-          <!-- Presets -->
           <div class="pt-2 border-t border-slate-800">
             <span class="text-[11px] text-slate-400 block mb-2 font-medium">Standard Reform Blueprints:</span>
             <div class="grid grid-cols-2 gap-2">
@@ -723,8 +710,6 @@
 
         <!-- Right: Live Simulation Impact Engine -->
         <div class="lg:col-span-7 space-y-6">
-          
-          <!-- Impact Metrics Grid -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <div class="glass-panel p-4 rounded-xl border border-slate-800 text-center">
               <span class="text-[10px] text-slate-400 uppercase font-semibold">Litigation Backlog</span>
@@ -748,7 +733,6 @@
             </div>
           </div>
 
-          <!-- Dual Visualizations: Radar Comparison + 5-Year Projection Line -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="glass-panel p-4 rounded-xl border border-slate-800">
               <h4 class="text-xs font-bold text-white mb-2 flex items-center justify-between">
@@ -771,7 +755,6 @@
             </div>
           </div>
 
-          <!-- Grounded Evidence Justification Note -->
           <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-xs space-y-2">
             <div class="flex items-center gap-2 text-sky-400 font-semibold">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -797,15 +780,13 @@
         </div>
       </div>
 
-      <!-- 5-Layer Pipeline Flow Diagram (Matches Presentation Page 3) -->
       <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-6">
         <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
           <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-          5-Tier Modular Methodology & Pipeline
+          5-Tier Modular Methodology & Pipeline (Matches Presentation Slide 3)
         </h3>
 
         <div class="space-y-4 text-xs">
-          <!-- Layer 1 -->
           <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/40 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div class="flex items-center gap-3">
               <span class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs">L1</span>
@@ -821,7 +802,6 @@
             </div>
           </div>
 
-          <!-- Layer 2 -->
           <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div class="flex items-center gap-3">
               <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">L2</span>
@@ -837,7 +817,6 @@
             </div>
           </div>
 
-          <!-- Layer 3 -->
           <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/40 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div class="flex items-center gap-3">
               <span class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">L3</span>
@@ -847,13 +826,12 @@
               </div>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono text-[10px]">Gemini 3 Flash LLM</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono text-[10px]">Gemini Flash LLM</span>
               <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono text-[10px]">GeoServer WMS/WFS</span>
               <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono text-[10px]">MapLibre</span>
             </div>
           </div>
 
-          <!-- Layer 4 -->
           <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div class="flex items-center gap-3">
               <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">L4</span>
@@ -869,7 +847,6 @@
             </div>
           </div>
 
-          <!-- Layer 5 -->
           <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div class="flex items-center gap-3">
               <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xs">L5</span>
@@ -887,7 +864,6 @@
         </div>
       </div>
 
-      <!-- Team & Hackathon Details -->
       <div class="glass-panel p-6 rounded-2xl border border-slate-800">
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
@@ -1000,11 +976,6 @@
   </div>
 
   <script>
-    /* ==========================================================================
-       BHUMI-NETRA PROTOTYPE CORE JAVASCRIPT
-       ========================================================================== */
-    
-    // Audio Feedback using Tone.js Synth
     let soundEnabled = true;
     let synth = null;
     
@@ -1030,9 +1001,7 @@
           Tone.start();
         }
         if (synth) synth.triggerAttackRelease(note, "32n");
-      } catch (e) {
-        // silent fallback
-      }
+      } catch (e) {}
     }
 
     function toggleAudioFx() {
@@ -1250,15 +1219,12 @@
       svamitva: {
         query: "What is the empirical impact of SVAMITVA drone titling on institutional credit access?",
         answer: `<strong>Grounded Synthesis (SVAMITVA Evaluation):</strong><br><br>
-        Based on empirical audits by the <em>Ministry of Panchayati Raj</em> and the <em>World Bank</em> [Ref: DOC-101], drone cadastral mapping has produced verifiable shifts in rural tenure security:
+        Based on empirical audits by the <em>Ministry of Panchayati Raj</em> and the <em>World Bank</em> [Ref: DOC-101], drone cadastral mapping has produced verifiable shifts in tenure security:
         <ul class="list-disc list-inside mt-2 space-y-1">
           <li><strong>Institutional Borrowing:</strong> Issuance of 'Property Cards' (Gharaunda) triggered a <strong>28.4% increase</strong> in commercial bank mortgage approvals for rural households previously deemed credit-invisible.</li>
           <li><strong>Panchayat Dispute Reductions:</strong> Boundary disputes in village abadi areas plummeted by <strong>42%</strong> within 18 months of drone map finalization.</li>
           <li><strong>Municipal Monetization:</strong> Gram Panchayats using digitized cadastre records reported an average <strong>34% increase in local property tax assessment</strong> accuracy.</li>
-        </ul>
-        <div class="mt-3 p-2.5 rounded bg-slate-950 border border-slate-800 text-[11px] text-sky-300">
-          <strong>Key Policy Recommendation:</strong> Integrate state banking SLBC portals directly with cadastral APIs to enable instant electronic charge creation on SVAMITVA titles.
-        </div>`,
+        </ul>`,
         citations: [
           { tag: "[Ref 1]", source: "MoPR / World Bank SVAMITVA Impact Assessment (2024)", excerpt: "Drone settlement unlocked ₹14,200 Cr in formalized rural bank mortgages." },
           { tag: "[Ref 2]", source: "NCAER Land Records and Services Index (N-LRSI)", excerpt: "Presumptive to conclusive transformation reduced boundary litigation by 42%." }
@@ -1309,16 +1275,12 @@
       if (!queryText) return;
 
       playTone("C5");
-
-      // Append User message
       appendChatMessage('user', queryText);
       input.value = '';
 
-      // Show loader
       const loader = document.getElementById('copilot-loading');
       loader.classList.remove('hidden');
 
-      // Check if it matches prebaked or dynamic synthesis
       let matchedKey = null;
       const lower = queryText.toLowerCase();
       if (lower.includes('svamitva') || lower.includes('drone') || lower.includes('credit')) matchedKey = 'svamitva';
@@ -1332,7 +1294,6 @@
           appendChatMessage('ai', item.answer);
           updateCitationInspector(item.citations);
         } else {
-          // Dynamic Grounded Synthesis Fallback
           const dynamicAnswer = `<strong>Grounded Synthesis for:</strong> "${escapeHtml(queryText)}"<br><br>
           Querying PostGIS index across 14,820 statutory acts, court judgments, and geodetic datasets:
           <ul class="list-disc list-inside mt-2 space-y-1">
@@ -1430,12 +1391,12 @@
         id: "SY-142/A",
         mandal: "Shamshabad, Rangareddy",
         status: "Clear Title",
-        color: "#10b981", // emerald
+        color: "#10b981",
         area: "4.25 Acres (1.72 Ha)",
         zone: "R-Zone (Peri-Urban)",
         ulpin: "36-021-142A-9821",
         encumbrance: "Nil (Clean 30Y)",
-        policy: "Parcel falls within 5km buffer of Rajiv Gandhi Intl Airport corridor. Tenancy rights legally verified under Telangana RoR Act 2020. No catchment overlap.",
+        policy: "Parcel falls within 5km buffer of Rajiv Gandhi Intl Airport corridor. Tenancy rights legally verified under Telangana RoR Act 2020.",
         coords: [
           [17.2403, 78.4294],
           [17.2435, 78.4320],
@@ -1447,7 +1408,7 @@
         id: "SY-143/B",
         mandal: "Shamshabad, Rangareddy",
         status: "Title Injunction",
-        color: "#ef4444", // red dispute
+        color: "#ef4444",
         area: "8.10 Acres (3.27 Ha)",
         zone: "Agricultural (Disputed Conversion)",
         ulpin: "36-021-143B-5014",
@@ -1464,7 +1425,7 @@
         id: "SY-145/C",
         mandal: "Shamshabad, Rangareddy",
         status: "SVAMITVA Property Card",
-        color: "#38bdf8", // sky
+        color: "#38bdf8",
         area: "1.80 Acres (0.72 Ha)",
         zone: "Abadi (Village Habitation)",
         ulpin: "36-021-145C-1102",
@@ -1481,7 +1442,7 @@
         id: "SY-148/E",
         mandal: "Shamshabad, Rangareddy",
         status: "Eco-Buffer Alert",
-        color: "#f59e0b", // amber
+        color: "#f59e0b",
         area: "12.4 Acres (5.01 Ha)",
         zone: "Catchment Protection Buffer",
         ulpin: "36-021-148E-4490",
@@ -1501,13 +1462,11 @@
       const mapContainer = document.getElementById('gis-map');
       if (!mapContainer) return;
 
-      // Initialize map centered at Shamshabad / Hyderabad, Telangana
       map = L.map('gis-map', {
         zoomControl: true,
         attributionControl: false
       }).setView([17.242, 78.433], 14);
 
-      // Dark styled tiles using CartoDB Dark Matter
       L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         maxZoom: 19,
         subdomains: 'abcd',
@@ -1518,7 +1477,6 @@
 
     function renderParcelsOnMap() {
       if (!map) return;
-      // Clear existing
       parcelLayers.forEach(l => map.removeLayer(l));
       parcelLayers = [];
 
@@ -1617,11 +1575,9 @@
       const lineCtx = document.getElementById('sandboxLineChart');
       if (!radarCtx || !lineCtx) return;
 
-      // Chart.js Default Dark Theme Setup
       Chart.defaults.color = '#94a3b8';
       Chart.defaults.font.family = '"Plus Jakarta Sans", sans-serif';
 
-      // 1. Radar Chart: Policy Equilibrium
       radarChart = new Chart(radarCtx, {
         type: 'radar',
         data: {
@@ -1667,7 +1623,6 @@
         }
       });
 
-      // 2. Line Chart: 5-Year Litigation Pendency
       lineChart = new Chart(lineCtx, {
         type: 'line',
         data: {
@@ -1712,31 +1667,26 @@
     }
 
     function updateSimulationOutputs() {
-      // Sliders
       const titling = parseInt(document.getElementById('slider-titling').value, 10);
       const tribunals = parseInt(document.getElementById('slider-tribunals').value, 10);
       const tenancy = parseInt(document.getElementById('slider-tenancy').value, 10);
       const ecobuffer = parseFloat(document.getElementById('slider-ecobuffer').value);
 
-      // Display values
       document.getElementById('val-slider-titling').innerText = `${titling}%`;
       document.getElementById('val-slider-tribunals').innerText = `${tribunals} Tribunals`;
       document.getElementById('val-slider-tenancy').innerText = `${tenancy} / 100`;
       document.getElementById('val-slider-ecobuffer').innerText = `${ecobuffer.toFixed(1)} km`;
 
-      // Mathematical Model for Projection (Derived from Empirical Coeffs)
       const litigationDrop = -Math.min(75, ((titling * 0.38) + (tribunals * 0.16) + (tenancy * 0.12))).toFixed(1);
       const creditGain = Math.round((titling * 420) + (tenancy * 210) + 6000);
       const yieldGain = +((tenancy * 0.18) + (titling * 0.08) + 2.5).toFixed(1);
       const forestEncroachDrop = -Math.min(85, (ecobuffer * 18.5 + (titling * 0.15))).toFixed(1);
 
-      // DOM updates
       document.getElementById('sim-metric-litigation').innerText = `${litigationDrop}%`;
       document.getElementById('sim-metric-credit').innerText = `+₹${creditGain.toLocaleString('en-IN')} Cr`;
       document.getElementById('sim-metric-yield').innerText = `+${yieldGain}%`;
       document.getElementById('sim-metric-forest').innerText = `${forestEncroachDrop}%`;
 
-      // Dynamic charts update
       if (radarChart) {
         const radarScore1 = Math.min(98, Math.round(Math.abs(litigationDrop) * 1.2));
         const radarScore2 = Math.min(95, Math.round(creditGain / 550));
@@ -1817,33 +1767,28 @@
 
     function switchTab(tabId) {
       playTone("C5");
-      // Hide all tabs
       document.querySelectorAll('.tab-content').forEach(el => {
         el.classList.add('hidden');
         el.classList.remove('block');
       });
 
-      // Reset button styles
       document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.classList.remove('bg-sky-600', 'text-white');
         btn.classList.add('text-slate-400');
       });
 
-      // Show selected
       const targetSec = document.getElementById(`section-${tabId}`);
       if (targetSec) {
         targetSec.classList.remove('hidden');
         targetSec.classList.add('block');
       }
 
-      // Highlight active nav button
       const activeBtn = document.getElementById(`tab-btn-${tabId}`);
       if (activeBtn) {
         activeBtn.classList.remove('text-slate-400');
         activeBtn.classList.add('bg-sky-600', 'text-white');
       }
 
-      // Tab specific triggers
       if (tabId === 'gis') {
         setTimeout(() => {
           initLeafletMap();
@@ -1857,13 +1802,11 @@
       }
     }
 
-    // Window Onload Initialization
     window.onload = function () {
       renderEvidenceCards(evidenceDatabase);
       initSandboxCharts();
       updateSimulationOutputs();
       
-      // Auto-initialize sound context on first user click anywhere
       document.body.addEventListener('click', () => {
         if (!synth) initAudio();
       }, { once: true });
